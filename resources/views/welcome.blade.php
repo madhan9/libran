@@ -25,9 +25,6 @@
 
         <!--<link rel="stylesheet" href="assets/css/xsslider.css">-->
 
-
-
-
         <!--For Plugins external css-->
         <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
 
