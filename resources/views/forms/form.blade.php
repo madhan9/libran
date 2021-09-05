@@ -3,6 +3,7 @@
 @section('content')
 <form class="container" method="POST" action="{{ url('form-save') }}">  
   @csrf
+
   <div class="form-row">
     <div class="col-md-4 mb-3">
  
@@ -27,7 +28,8 @@
   <div class="form-row">
     <div class="col-md-4 mb-3">
       
-      <input type="date" class="form-control" tabindex="5" name="dob"  placeholder="Date Of Birth" required>
+      <input type="date" class="form-control" tabindex="5" name="dob" id="dob"  placeholder="Date Of Birth" required max="{{\Carbon\Carbon::today()->startOfYear()->subYears(18)->format('Y-m-d')}}"
+      value="{{\Carbon\Carbon::today()->startOfYear()->subYears(18)->format('Y-m-d')}}">
     </div>
     <div class="col-md-3 mb-3">
      
@@ -204,6 +206,8 @@
 <script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
 
 <script type="application/javascript">
+
+  var dobvalue = '{!!\Carbon\Carbon::today()->subYears(18)->format("d/m/Y")!!}';
   $(function(){
     $('#bank_no_1,#bank_no_2,#bank_no_3,#bank_no_4,#bank_no_5,#bank_no_6,#bank_no_7,#bank_no_8,#bank_no_9,#bank_no_10,#bank_no_11,#bank_no_12,#bank_no_13,#bank_no_14,#bank_no_15').keyup(function(e){
       if(e.keyCode == 8)
