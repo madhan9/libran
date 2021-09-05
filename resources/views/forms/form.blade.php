@@ -78,8 +78,8 @@
       <tr>
         <td class="p-2">
   
-          <input type="checkbox" name="qualification_sslc" tabindex="14" id="qualification_sslc" value="1"/>
-          <label for="qualification_sslc" class="form-label">SSLC</label>
+          <input type="checkbox" name="qualification_sslc" checked disabled tabindex="14" id="qualification_sslc" value="1"/>
+          <label for="qualification_sslc" class="form-label cursor-pointer" disabled>SSLC</label>
         </td>
         <td class="p-2">
          
@@ -93,47 +93,47 @@
       <tr>
         <td class="p-2">
   
-          <input type="checkbox" name="qualification_puc" tabindex="17" id="qualification_puc" value="2"/>
-          <label for="qualification_puc" class="form-label">PUC</label>
+          <input type="checkbox" name="qualification_puc" tabindex="17" id="qualification_puc" value="1"/>
+          <label for="qualification_puc" class="form-label cursor-pointer">PUC</label>
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" tabindex="18" name="puc_precentage"  placeholder="Percentage" required>
+          <input type="text" class="form-control" tabindex="18" disabled name="puc_precentage" id="puc_precentage"  placeholder="Percentage" >
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" tabindex="19" name="puc_result"  placeholder="Result" required>
+          <input type="text" class="form-control" tabindex="19" disabled name="puc_result" id="puc_result"  placeholder="Result" >
         </td>
       </tr>
       <tr>
         <td class="p-2">
   
-          <input type="checkbox" name="qualification_iti" tabindex="20" id="qualification_iti" value="3"/>
-          <label for="qualification_iti" class="form-label">ITI</label>
+          <input type="checkbox" name="qualification_iti" tabindex="20" id="qualification_iti" value="1"/>
+          <label for="qualification_iti" class="form-label cursor-pointer">ITI</label>
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="iti_precentage" tabindex="21"  placeholder="Percentage" required>
+          <input type="text" class="form-control" name="iti_precentage" id="iti_precentage" disabled tabindex="21"  placeholder="Percentage" >
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="iti_result"  tabindex="22"  placeholder="Result" required>
+          <input type="text" class="form-control" name="iti_result" id="iti_result"  disabled tabindex="22"  placeholder="Result" >
         </td>
       </tr>
       <tr>
         <td class="p-2">
   
-          <input type="checkbox" name="qualification_other" id="qualification_other"  tabindex="23"  value="4"/>
-          <label for="qualification_other" class="form-label">Any Other</label>
+          <input type="checkbox" name="qualification_other" id="qualification_other"  tabindex="23"  value="1"/>
+          <label for="qualification_other" class="form-label cursor-pointer">Any Other</label>
            <input type="text" class="form-control col-md-12" name="others_name"  tabindex="-1"  placeholder="Other's" style="display: none;" >
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="other_precentage"  tabindex="24"  placeholder="Percentage" required>
+          <input type="text" class="form-control" name="other_precentage" id="other_precentage" disabled tabindex="24"  placeholder="Percentage" >
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="other_result"   tabindex="25"  placeholder="Result" required>
+          <input type="text" class="form-control" name="other_result" id="other_result"  disabled tabindex="25"  placeholder="Result" >
         </td>
       </tr>
 
@@ -213,6 +213,52 @@
       }
       if($(this).val().trim().length==$(this).attr('maxlength'))
         $(this).next(':input').focus()
-    })
+    });
+
+    $("input[type='checkbox']").on("change", function(e)
+    {
+       
+          if($("#qualification_puc").is(':checked'))
+          {
+              $("#puc_precentage").prop("disabled", false);
+              $("#puc_precentage").prop("required", true);
+              $("#puc_result").prop("disabled", false);
+              $("#puc_result").prop("required", true);
+          }
+          else{
+              $("#puc_precentage").prop("disabled", true).val("");
+              $("#puc_precentage").prop("required", false);
+              $("#puc_result").prop("disabled", true).val("");
+              $("#puc_result").prop("required", false);
+          }
+          if($("#qualification_iti").is(':checked'))
+          {
+              $("#iti_precentage").prop("disabled", false);
+              $("#iti_precentage").prop("required", true);
+              $("#iti_result").prop("disabled", false);
+              $("#iti_result").prop("required", true);
+          }
+          else{
+             $("#iti_precentage").prop("disabled", true).val("");
+              $("#iti_precentage").prop("required", false);
+              $("#iti_result").prop("disabled", true).val("");
+              $("#itiresult").prop("required", false);
+          }
+          if($("#qualification_other").is(':checked'))
+          {
+              $("#other_precentage").prop("disabled", false);
+              $("#other_precentage").prop("required", true);
+              $("#other_result").prop("disabled", false);
+              $("#other_result").prop("required", true);
+          }
+          else{
+             $("#other_precentage").prop("disabled", true).val("");
+              $("#other_precentage").prop("required", false);
+              $("#other_result").prop("disabled", true).val("");
+              $("#other_result").prop("required", false);
+          }
+        
+    });
   })
 </script>
+
