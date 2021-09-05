@@ -17,6 +17,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+
+Route::get('/register', function () {
+    return view('auth.register');
+});
+
+
+Route::group(['middleware' => ['auth']], function () { 
+	Route::get('/form', function () {
+	    return view('forms.form');
+	});
+
+  Route::post('/form-save', [App\Http\Controllers\FormController::class, 'store']);
+});
+
+
+
 Auth::routes();
 
 

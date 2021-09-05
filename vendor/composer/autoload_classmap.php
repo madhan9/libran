@@ -28,6 +28,7 @@ return array(
     'App\\Models\\Clients' => $baseDir . '/app/Models/Clients.php',
     'App\\Models\\FinalResult' => $baseDir . '/app/Models/FinalResult.php',
     'App\\Models\\NatureOfJob' => $baseDir . '/app/Models/NatureOfJob.php',
+    'App\\Models\\Payment' => $baseDir . '/app/Models/Payment.php',
     'App\\Models\\Researcher' => $baseDir . '/app/Models/Researcher.php',
     'App\\Models\\Status' => $baseDir . '/app/Models/Status.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',

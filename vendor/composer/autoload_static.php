@@ -540,6 +540,7 @@ class ComposerStaticInit2d46d0c54c74e97dac1b5300e0ee303e
         'App\\Models\\Clients' => __DIR__ . '/../..' . '/app/Models/Clients.php',
         'App\\Models\\FinalResult' => __DIR__ . '/../..' . '/app/Models/FinalResult.php',
         'App\\Models\\NatureOfJob' => __DIR__ . '/../..' . '/app/Models/NatureOfJob.php',
+        'App\\Models\\Payment' => __DIR__ . '/../..' . '/app/Models/Payment.php',
         'App\\Models\\Researcher' => __DIR__ . '/../..' . '/app/Models/Researcher.php',
         'App\\Models\\Status' => __DIR__ . '/../..' . '/app/Models/Status.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
