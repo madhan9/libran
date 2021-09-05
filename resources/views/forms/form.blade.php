@@ -192,10 +192,21 @@
  <div class="form-row py-3">
 
       @for($i =1 ;$i<= 15;$i++)
-      <input type="text" maxlength="1" class="form-control" style="width:60px;margin-right: 8px;text-align:center;" name="shoes_size"  placeholder="1" required>
+      <input type="text" maxlength="1" class="form-control" style="width:60px;margin-right: 8px;text-align:center;" name="shoes_size"  placeholder="-" id="bank_no_{{$i}}">
       @endfor
   </div>
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
-    @endsection
 
+    @endsection
+<script src="{{asset('js/vendor/jquery-1.11.2.min.js')}}"></script>
+<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
+
+<script type="text/javascript">
+  $(function(){
+    $('#bank_no_1,#bank_no_2,#bank_no_3,#bank_no_4,#bank_no_5,#bank_no_6,#bank_no_7,#bank_no_8,#bank_no_9,#bank_no_10,#bank_no_11,#bank_no_12,#bank_no_13,#bank_no_14,#bank_no_15').keyup(function(e){
+      if($(this).val().length==$(this).attr('maxlength'))
+        $(this).next(':input').focus()
+    })
+  })
+</script>
