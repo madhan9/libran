@@ -2259,7 +2259,7 @@ select.form-control[multiple] {
 }
 
 textarea.form-control {
-  height: auto;
+  height: auto !important;
 }
 
 .form-group {
