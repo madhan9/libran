@@ -2225,7 +2225,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #212529;
+  color: #212529 !important;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
