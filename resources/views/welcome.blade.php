@@ -65,8 +65,8 @@
                             <div class="col-md-6">
                                 <div class="navbar-callus text-left sm-text-center">
                                     <ul class="list-inline">
-                                        <li><a href=""><i class="fa fa-phone"></i> Call us: 1234 5678 90</a></li>
-                                        <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: your@email.com</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> Call us: 98802 78721</a></li>
+                                        <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: libran365@gmail.com</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -77,8 +77,6 @@
                                         <li><a href=""><i class="fa fa-twitter"></i></a></li>
                                         <li><a href=""><i class="fa fa-linkedin"></i></a></li>
                                         <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href=""><i class="fa fa-behance"></i></a></li>
-                                        <li><a href=""><i class="fa fa-dribbble"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -123,9 +121,9 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#home">Home</a></li>                    
-                            <li><a href="#features">About</a></li>
-                            <li><a href="#business">Service</a></li>
-                            <li><a href="#work">Portfolio</a></li>
+                            <li><a href="#aboutus">About</a></li>
+                            <li><a href="#service">Service</a></li>
+                            <li><a href="#work">Strength</a></li>
                             <li><a href="#test">Blog</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
@@ -145,39 +143,39 @@
                                 <div class="hello_slid">
                                     <div class="slid_item">
                                         <div class="home_text ">
-                                            <h2 class="text-white">Welcome to <strong>Made</strong></h2>
-                                            <h1 class="text-white">We Do Business All Of Time</h1>
-                                            <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
+                                            <h2 class="text-white">Welcome to <strong>LIBRAN</strong></h2>
+                                            <h1 class="text-white">We supply quality human resources for your organization to accomplish your goal</h1>
+                                           
                                         </div>
 
-                                        <div class="home_btns m-top-40">
+                                       <!--  <div class="home_btns m-top-40">
                                             <a href="" class="btn btn-primary m-top-20">Buy Now</a>
                                             <a href="" class="btn btn-default m-top-20">Take a Tour</a>
-                                        </div>
+                                        </div> -->
                                     </div><!-- End off slid item -->
                                     <div class="slid_item">
                                         <div class="home_text ">
-                                            <h2 class="text-white">Welcome to <strong>Made</strong></h2>
-                                            <h1 class="text-white">We Do Business All Of Time</h1>
-                                            <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
+                                     
+                                            <h1 class="text-white">To give effective and Sustainable manpower service to full fill the company requires</h1>
+                                           
                                         </div>
 
-                                        <div class="home_btns m-top-40">
+                                       <!--  <div class="home_btns m-top-40">
                                             <a href="" class="btn btn-primary m-top-20">Buy Now</a>
                                             <a href="" class="btn btn-default m-top-20">Take a Tour</a>
-                                        </div>
+                                        </div> -->
                                     </div><!-- End off slid item -->
                                     <div class="slid_item">
                                         <div class="home_text ">
-                                            <h2 class="text-white">Welcome to <strong>Made</strong></h2>
-                                            <h1 class="text-white">We Do Business All Of Time</h1>
-                                            <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
+                                            
+                                            <h1 class="text-white">Quality human resources for your esteemed organization</h1>
+                                          
                                         </div>
 
-                                        <div class="home_btns m-top-40">
+                                        <!-- <div class="home_btns m-top-40">
                                             <a href="" class="btn btn-primary m-top-20">Buy Now</a>
                                             <a href="" class="btn btn-default m-top-20">Take a Tour</a>
-                                        </div>
+                                        </div> -->
                                     </div><!-- End off slid item -->
                                 </div>
                             </div>
@@ -192,31 +190,31 @@
 
 
             <!--Featured Section-->
-            <section id="features" class="features">
+            <section id="aboutus" class="features">
                 <div class="container">
                     <div class="row">
                         <div class="main_features fix roomy-70">
                             <div class="col-md-4">
                                 <div class="features_item sm-m-top-30">
                                     <div class="f_item_icon">
-                                        <i class="fa fa-thumbs-o-up"></i>
+                                        <i class="fa fa-eye"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Best Quality Design</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>OUR VISION</h3>
+                                        <p class="text-justify">To be one of the leading manpower supplier</p>
+                                        <p class="text-justify">To give effective and Sustainable manpower service to full fill the company requires.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="features_item sm-m-top-30">
                                     <div class="f_item_icon">
-                                        <i class="fa fa-tablet"></i>
+                                        <i class="fa fa-bullseye"></i>
+
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Responsive Design</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>OUR MISSION</h3>
+                                        <p class="text-justify">we are taking care of customer satisfaction by providing skilled and unskilled manpower and dedicated qualified staff.</p>
                                     </div>
                                 </div>
                             </div>
@@ -226,9 +224,9 @@
                                         <i class="fa fa-sliders"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Easy to Customize</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>OUR STRENGTH</h3>
+                                        <p class="text-justify">Large resume data bank.</p>
+                                        <p class="text-justify">Largest reference candidates by old employees.</p>
                                     </div>
                                 </div>
                             </div>
@@ -239,9 +237,11 @@
 
 
             <!--Business Section-->
-            <section id="business" class="business bg-grey roomy-70">
+            <section id="business" class="business bg-grey roomy-50">
                 <div class="container">
-                    <div class="row">
+                     <h3 class="text-uppercase text-center mb-5"><strong>"We supply quality human resources for your organization to accomplish your goal"
+                                </strong> </h4>
+                    <div class="row mb-5">
                         <div class="main_business">
                             <div class="col-md-6">
                                 <div class="business_slid">
@@ -255,13 +255,13 @@
 
                                         <div class="business_item">
                                             <div class="business_img">
-                                                <img src="images/about-img1.jpg" alt="" />
+                                                <img src="images/about-img2.jpg" alt="" />
                                             </div>
                                         </div>
 
                                         <div class="business_item">
                                             <div class="business_img">
-                                                <img src="images/about-img1.jpg" alt="" />
+                                                <img src="images/about-img3.jpg" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -269,23 +269,16 @@
                             </div>
                             
                             <div class="col-md-6">
-                                <div class="business_item sm-m-top-50">
-                                    <h2 class="text-uppercase"><strong>Made</strong> is Template For Business</h2>
-                                    <ul>
-                                        <li><i class="fa fa-arrow-circle-right"></i> Clean & Modern Design</li>
-                                        <li><i class="fa  fa-arrow-circle-right"></i> Fully Responsive</li>
-                                        <li><i class="fa  fa-arrow-circle-right"></i> Google Fonts</li>
+
+                                <div class="business_item mb-3 text-justify">
+                                    
+                                    <ul class="mt-5">
+                                        <li class="mb-3"><i class="fa fa-arrow-circle-right"></i> We are happy introduce ourselves<span class="theme-text font-weight-bold"> Libran Enterprises</span>, one of the leading man power supply concern which provides dedicated and qualified manpower on contract basis or permenent basis since 2006.</li>
+                                        <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> One of the consulting firm.</li>
+                                        <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Its main objective is to narrow the gap between the talent and opportunities.</li>
+                                        <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Our manpower supply chain is continues and services offered are staffing (full time and contract basis).</li>
                                     </ul>
-                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque eleifend in mi 
-                                        sit amet mattis suspendisse ac ligula volutpat nisl rhoncus sagittis cras suscipit 
-                                        lacus quis erat malesuada lobortis eiam dui magna volutpat commodo eget pretium vitae
-                                        elit etiam luctus risus urna in malesuada ante convallis.</p>
-
-                                    <div class="business_btn">
-                                        <a href="https://bootstrapthemes.co" class="btn btn-default m-top-20">Read More</a>
-                                        <a href="" class="btn btn-primary m-top-20">Buy Now</a>
-                                    </div>
-
+                                    
                                 </div>
                             </div>
                         </div>
@@ -293,14 +286,16 @@
                 </div>
             </section><!-- End off Business section -->
 
+            
+
 
             <!--product section-->
-            <section id="product" class="product">
+            <section id="service" class="product">
                 <div class="container">
                     <div class="main_product roomy-80">
                         <div class="head_title text-center fix">
-                            <h2 class="text-uppercase">What Client Say</h2>
-                            <h5>Clean and Modern design is our best specialist</h5>
+                            <h2 class="text-uppercase">OUR SERVICES</h2>
+                            <!-- <h5>Clean and Modern design is our best specialist</h5> -->
                         </div>
 
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -316,62 +311,43 @@
                                 <div class="item active">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4 service-box ">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="images/work-img1.jpg" alt="" />
+                                                        <!-- <img src="images/work-img1.jpg" alt="" /> -->
+                                                        <p>Manpower Outsourcing - On Contract Basis- Staff Level, Operators, and Helpers</p>
                                                         <div class="port_overlay text-center">
                                                             <a href="images/work-img1.jpg" class="popup-img">+</a>
                                                         </div>
                                                     </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4 service-box">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="images/work-img2.jpg" alt="" />
+                                                       <!--  <img src="images/work-img2.jpg" alt="" /> -->
+                                                        <p>Placement Services</p>
                                                         <div class="port_overlay text-center">
                                                             <a href="images/work-img2.jpg" class="popup-img">+</a>
                                                         </div>
                                                     </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
+                                                   
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4 service-box ">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="images/work-img3.jpg" alt="" />
+                                                        <!-- <img src="images/work-img3.jpg" alt="" /> -->
+                                                         <p>Housekeeping - With Material and without Material</p>
                                                         <div class="port_overlay text-center">
                                                             <a href="images/work-img3.jpg" class="popup-img">+</a>
                                                         </div>
                                                     </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="images/work-img4.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="images/work-img4.jpg" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -379,128 +355,45 @@
                                 <div class="item">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4 service-box">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="images/work-img1.jpg" alt="" />
+                                                        <p>Guest House Maintenance</p>
                                                         <div class="port_overlay text-center">
                                                             <a href="images/work-img1.jpg" class="popup-img">+</a>
                                                         </div>
                                                     </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
+                                                   
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4 service-box">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="images/work-img2.jpg" alt="" />
+                                                        <p>Uniform and Safety Shoes Supply</p>
                                                         <div class="port_overlay text-center">
                                                             <a href="images/work-img2.jpg" class="popup-img">+</a>
                                                         </div>
                                                     </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
+                                                   
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4 service-box ">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="images/work-img3.jpg" alt="" />
+                                                       <p>Statutory Compliance Maintenance</p>
                                                         <div class="port_overlay text-center">
                                                             <a href="images/work-img3.jpg" class="popup-img">+</a>
                                                         </div>
                                                     </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="images/work-img4.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="images/work-img4.jpg" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="item">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="images/work-img1.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="images/work-img1.jpg" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="images/work-img2.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="images/work-img2.jpg" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="images/work-img3.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="images/work-img3.jpg" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="images/work-img4.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="images/work-img4.jpg" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                             </div>
 

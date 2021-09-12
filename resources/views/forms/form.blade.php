@@ -1,29 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
-<form class="container" method="POST" action="{{ url('form-save') }}">  
+<form class="container" method="POST" action="{{ url('form-save') }}" enctype="multipart/form-data">  
   @csrf
+  <div class="form-row col-md-8 p-0">
+      <div class="col-md-8">
+    <div class="form-row col-md-12 p-0">
+      <div class="col-md-6 mb-3">
+   
+        <input type="text" class="form-control" tabindex="1" name="employee_code" placeholder="Employee Code"  required>
+      </div>                        
+      <div class="col-md-6 mb-3">
 
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
- 
-      <input type="text" class="form-control" tabindex="1" name="employee_code" placeholder="Employee Code"  required>
-    </div>                        
-    <div class="col-md-4 mb-3">
-
-      <input type="text" class="form-control" tabindex="2" name="name"  placeholder="Name"  required>
+        <input type="text" class="form-control" tabindex="2" name="name"  placeholder="Name"  required>
+      </div>
     </div>
-  </div>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
+    <div class="form-row col-md-12 p-0">
+      <div class="col-md-6 mb-3">
+        
+        <input type="text" class="form-control" tabindex="3" name="father_name"  placeholder="Father's Name" required>
+      </div>
+      <div class="col-md-6 mb-3">
       
-      <input type="text" class="form-control" tabindex="3" name="father_name"  placeholder="Father's Name" required>
+        <input type="text" class="form-control" tabindex="4" name="mother_name"  placeholder="Mother's Name" required>
+      </div>
     </div>
-    <div class="col-md-4 mb-3">
-    
-      <input type="text" class="form-control" tabindex="4" name="mother_name"  placeholder="Mother's Name" required>
     </div>
-    
+     <div class="col-md-4 mb-3">
+      <img for="filePhoto" id="previewHolder" alt="Uploaded Image Preview Holder" width="100px" height="100px"/>
+      <br>
+      <label for="filePhoto">Upload Image</label>
+      <input type="file" name="filePhoto" value="" class="d-none" id="filePhoto" class="required borrowerImageFile" data-errormsg="PhotoUploadErrorMsg">
+
+    </div>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">
@@ -206,9 +215,29 @@
 <script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
 
 <script type="application/javascript">
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $('#previewHolder').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  } else {
+    alert('select a file to see preview');
+    $('#previewHolder').attr('src', '');
+  }
+}
+
+
 
   var dobvalue = '{!!\Carbon\Carbon::today()->subYears(18)->format("d/m/Y")!!}';
   $(function(){
+
+    $("#filePhoto").change(function() {
+      readURL(this);
+    });
+
+
     $('#bank_no_1,#bank_no_2,#bank_no_3,#bank_no_4,#bank_no_5,#bank_no_6,#bank_no_7,#bank_no_8,#bank_no_9,#bank_no_10,#bank_no_11,#bank_no_12,#bank_no_13,#bank_no_14,#bank_no_15').keyup(function(e){
       if(e.keyCode == 8)
       {

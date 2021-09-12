@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Employees;
 use Validator;
+use Illuminate\Support\Facades\Storage;
 
 class FormController extends Controller
 {
@@ -39,7 +40,7 @@ class FormController extends Controller
         $input =[];
         
         $input['unique_id'] =  time().mt_rand(0,9);
-        $input["employee_no"] = $res["employee_code"];
+        $input["employee_code"] = $res["employee_code"];
         $input["name"] = $res["name"];
         $input["father_name"] =$res["father_name"];
         $input["mother_name"] = $res["mother_name"];
@@ -54,6 +55,14 @@ class FormController extends Controller
         $input["per_contact"] = $res["per_contact"];
         $input["per_email"] = $res["per_email"];
 
+        if ($request->hasFile('filePhoto')) {
+            $file = $request->file('filePhoto');
+            $destinationPath = public_path()."/uploads/".$res["employee_code"]."/";
+
+            $file->move($destinationPath,$file->getClientOriginalName());
+            dd($destinationPath);
+            //Storage::disk('public')->put($image , 'Contents');
+        }
 
         $employee = new Employees();
         $employee->fill($input)->save();
@@ -73,6 +82,7 @@ class FormController extends Controller
         $rules["mother_name"] = "required";
         $rules["dob"] = "required";
         //$rules["age"] = "required";
+        $rules["filePhoto"] = 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048';
         $rules["blood_group"] = "required";
         $rules["marital_status"] = "required";
         $rules["present_address"] = "required";
