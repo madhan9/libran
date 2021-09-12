@@ -65,7 +65,7 @@
                             <div class="col-md-6">
                                 <div class="navbar-callus text-left sm-text-center">
                                     <ul class="list-inline">
-                                        <li><a href=""><i class="fa fa-phone"></i> Call us: 98802 78721</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> Call us:+91 - 98802 78721</a></li>
                                         <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: libran365@gmail.com</a></li>
                                     </ul>
                                 </div>
@@ -124,7 +124,6 @@
                             <li><a href="#aboutus">About</a></li>
                             <li><a href="#service">Service</a></li>
                             <li><a href="#strength">Strength</a></li>
-                            <li><a href="#test">Blog</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -546,7 +545,7 @@
 
 
             <!--Call to  action section-->
-            <section id="action" class="action bg-primary roomy-40">
+            <!-- <section id="action" class="action bg-primary roomy-40">
                 <div class="container">
                     <div class="row">
                         <div class="maine_action">
@@ -563,7 +562,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
 
 
@@ -589,7 +588,7 @@
                                         <div class="item_icon"><i class="fa fa-phone"></i></div>
                                         <div class="widget_ab_item_text">
                                             <h6 class="text-white">Phone :</h6>
-                                            <p>98802 78721</p>
+                                            <p>+91 - 98802 78721</p>
                                         </div>
                                     </div>
                                     <div class="widget_ab_item m-top-30">
