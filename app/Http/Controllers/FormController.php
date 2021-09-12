@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Employees;
 use Validator;
 use Illuminate\Support\Facades\Storage;
-
+use Carbon\Carbon;
+use App\Models\ContactMail;
 class FormController extends Controller
 {
     /**
@@ -14,10 +15,10 @@ class FormController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -76,6 +77,8 @@ class FormController extends Controller
     {
         $rules =[];
 
+        
+
         $rules["employee_code"] = "required";
         $rules["name"] = "required";
         $rules["father_name"] = "required";
@@ -93,5 +96,38 @@ class FormController extends Controller
         $rules["per_email"] = "required";
 
         return $rules;
+    }
+
+    public function contactMail(Request $request)
+    {
+        
+        $res = $request->all();
+        
+        $contact_mail = new ContactMail();
+        $input =[];
+        
+        $input['unique_no'] =  time().mt_rand(0,9);
+        $input["name"] = $res["name"];
+        $input["email"] = $res["email"];
+        $input["mobile_no"] =$res["mobile_no"];
+        $input["message"] = $res["message"];
+        $input["created_at"] = Carbon::today();
+
+        $validated = Validator::make($input,[
+            "name" => "required|max:100",
+            "email" => "required|email",
+            "mobile_no" => "required|integer",
+            "message" => "required|max:1000"
+        ]);
+
+        if ($validated->fails()) {
+            return redirect('/')
+                        ->withErrors($validated)
+                        ->withInput();
+        }
+
+        $contact_mail->fill($input)->save();
+
+        return view('welcome');
     }
 }

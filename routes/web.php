@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/contact-mail', [App\Http\Controllers\FormController::class, 'contactMail']);
 
 
 Route::get('/login', function () {
@@ -27,13 +28,12 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
-
 Route::group(['middleware' => ['auth']], function () { 
 	Route::get('/form', function () {
 	    return view('forms.form');
 	});
 
-  Route::post('/form-save', [App\Http\Controllers\FormController::class, 'store']);
+  	Route::post('/form-save', [App\Http\Controllers\FormController::class, 'store']);
 });
 
 

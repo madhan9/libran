@@ -603,13 +603,15 @@
 
                             <div class="col-md-6">
                                 <div class="widget_item widget_newsletter  sm-m-top-50">
-                                     <form class="form-inline m-top-30">
+                                     <form class="form-inline m-top-30" action="{{ url('contact-mail')}}" method="POST"enctype="multipart/form-data">  
+  @csrf
                                         <div class="form-group ">
                                             <h5 class="text-white">Contact Us</h5>
-                                            <input type="text" class="form-control my-2" placeholder="Name">
-                                            <input type="email" class="form-control my-2" placeholder="Email">
-                                            <input type="text" maxlength="10"minlength="10" onkeypress="isNumberKey(event)" class="form-control my-2" placeholder="Phone">
-                                            <textarea class="form-control my-2" rows="5" cols="50" style="resize: none;height: 140px !important;" placeholder="Message"></textarea>
+                                            <input type="text" name="name" required class="form-control my-2" placeholder="Name">
+                                            <input type="email" name="email" required class="form-control my-2" placeholder="Email">
+                                            <input type="text" name="mobile_no" required maxlength="10"minlength="10" 
+                                            onkeypress="isNumberKey(event)" class="form-control my-2" placeholder="Phone">
+                                            <textarea name="message" required class="form-control my-2" rows="5" cols="50" style="resize: none;height: 140px !important;" placeholder="Message"></textarea>
                                         </div>
                                         <button type="submit" class="pl-2 btn btn-warning">Submit</button>
                                     </form>
