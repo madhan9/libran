@@ -200,9 +200,9 @@
                                         <i class="fa fa-eye"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>OUR VISION</h3>
-                                        <p class="text-justify">To be one of the leading manpower supplier</p>
-                                        <p class="text-justify">To give effective and Sustainable manpower service to full fill the company requires.</p>
+                                        <h3 class="wow fadeInLeft">OUR VISION</h3>
+                                        <p class="text-justify wow fadeInLeft">To be one of the leading manpower supplier</p>
+                                        <p class="text-justify wow fadeInLeft">To give effective and Sustainable manpower service to full fill the company requires.</p>
                                     </div>
                                 </div>
                             </div>
@@ -213,8 +213,8 @@
 
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>OUR MISSION</h3>
-                                        <p class="text-justify">we are taking care of customer satisfaction by providing skilled and unskilled manpower and dedicated qualified staff.</p>
+                                        <h3 class="wow fadeInLeft">OUR MISSION</h3>
+                                        <p class="text-justify wow fadeInLeft">we are taking care of customer satisfaction by providing skilled and unskilled manpower and dedicated qualified staff.</p>
                                     </div>
                                 </div>
                             </div>
@@ -224,9 +224,9 @@
                                         <i class="fa fa-sliders"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>OUR STRENGTH</h3>
-                                        <p class="text-justify">Large resume data bank.</p>
-                                        <p class="text-justify">Largest reference candidates by old employees.</p>
+                                        <h3 class="wow fadeInLeft">OUR STRENGTH</h3>
+                                        <p class="text-justify wow fadeInLeft">Large resume data bank.</p>
+                                        <p class="text-justify wow fadeInLeft">Largest reference candidates by old employees.</p>
                                     </div>
                                 </div>
                             </div>
@@ -242,8 +242,8 @@
                      <h3 class="text-uppercase text-center mb-5"><strong>"We supply quality human resources for your organization to accomplish your goal"
                                 </strong> </h4>
                     <div class="row mb-5">
-                        <div class="main_business">
-                            <div class="col-md-6">
+                        <div class="main_business ">
+                            <div class="col-md-6 wow fadeInRight">
                                 <div class="business_slid">
                                     <div class="slid_shap bg-grey"></div>
                                     <div class="business_items text-center">
@@ -270,9 +270,9 @@
                             
                             <div class="col-md-6">
 
-                                <div class="business_item mb-3 text-justify">
+                                <div class="business_item mb-3 text-justify wow fadeInLeft">
                                     
-                                    <ul class="mt-5">
+                                    <ul class="mt-5 ">
                                         <li class="mb-3"><i class="fa fa-arrow-circle-right"></i> We are happy introduce ourselves<span class="theme-text font-weight-bold"> Libran Enterprises</span>, one of the leading man power supply concern which provides dedicated and qualified manpower on contract basis or permenent basis since 2006.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> One of the consulting firm.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Its main objective is to narrow the gap between the talent and opportunities.</li>
@@ -429,13 +429,13 @@
 
                             <div class="col-md-6">
                                 <div class="">
-                                    <div class="slid_shap bg-grey">
+                                    <div class="slid_shap bg-grey wow fadeInLeft">
                                         <img src="images/logo.png" alt="libran Logo">
                                     </div>
                                 </div>
                                 <div class="business_item mb-3 text-justify">
                                    
-                                    <ul class="mt-3">
+                                    <ul class="mt-3 wow fadeInRight">
                                         <li class="mb-3"><i class="fa fa-arrow-circle-right"></i> Proprietor involvement.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Large resume data bank.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Experienced staff.</li>
@@ -628,9 +628,10 @@
 
                                     </form>
                                     <div class="widget_brand m-top-40">
-                                        <a href="" class="text-uppercase">Your Logo</a>
-                                        <p class="font-grey">Lorem ipsum dolor sit amet consec tetur 
-                                            adipiscing elit nulla aliquet pretium nisi in</p>
+                                        <a href="" class="text-uppercase">
+                                            <img src="images/logo.png" alt="libran Logo">
+                                        </a>
+                                    
                                     </div>
                                     <ul class="list-inline m-top-20">
                                         <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
