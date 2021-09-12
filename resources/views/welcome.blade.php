@@ -607,11 +607,11 @@
   @csrf
                                         <div class="form-group ">
                                             <h5 class="text-white">Contact Us</h5>
-                                            <input type="text" name="name" required class="form-control my-2" placeholder="Name">
-                                            <input type="email" name="email" required class="form-control my-2" placeholder="Email">
-                                            <input type="text" name="mobile_no" required maxlength="10"minlength="10" 
+                                            <input type="text" name="name" required class="form-control my-2" placeholder="Name" autocomplete="off">
+                                            <input type="email" name="email" required class="form-control my-2" placeholder="Email" autocomplete="off">
+                                            <input type="text" name="mobile_no" required maxlength="10"minlength="10" autocomplete="off" 
                                             onkeypress="isNumberKey(event)" class="form-control my-2" placeholder="Phone">
-                                            <textarea name="message" required class="form-control my-2" rows="5" cols="50" style="resize: none;height: 140px !important;" placeholder="Message"></textarea>
+                                            <textarea name="message" required class="form-control my-2" rows="5" autocomplete="off" cols="50" style="resize: none;height: 140px !important;" placeholder="Message"></textarea>
                                         </div>
                                         <button type="submit" class="pl-2 btn btn-warning">Submit</button>
                                     </form>
