@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <form class="container" method="POST" action="{{ url('form-save') }}" enctype="multipart/form-data">  
   @csrf
   <div class="form-row col-md-8 p-0">
@@ -8,45 +17,50 @@
     <div class="form-row col-md-12 p-0">
       <div class="col-md-6 mb-3">
    
-        <input type="text" class="form-control" tabindex="1" name="employee_code" placeholder="Employee Code"  required>
+        <input type="text" class="form-control" tabindex="1" name="employee_code" placeholder="Employee Code"  value="{{ old('employee_code') }}">
+  
       </div>                        
       <div class="col-md-6 mb-3">
 
-        <input type="text" class="form-control" tabindex="2" name="name"  placeholder="Name"  required>
+        <input type="text" class="form-control" tabindex="2" name="name"  placeholder="Name"  required  value="{{ old('name') }}">
+
       </div>
     </div>
     <div class="form-row col-md-12 p-0">
       <div class="col-md-6 mb-3">
         
-        <input type="text" class="form-control" tabindex="3" name="father_name"  placeholder="Father's Name" required>
+        <input type="text" class="form-control" tabindex="3" name="father_name"  placeholder="Father's Name" required value="{{ old('father_name') }}">
+
       </div>
       <div class="col-md-6 mb-3">
       
-        <input type="text" class="form-control" tabindex="4" name="mother_name"  placeholder="Mother's Name" required>
+        <input type="text" class="form-control" tabindex="4" name="mother_name"  placeholder="Mother's Name" required value="{{ old('mother_name') }}">
+
       </div>
     </div>
     </div>
      <div class="col-md-4 mb-3">
-      <img for="filePhoto" id="previewHolder" alt="Uploaded Image Preview Holder" width="100px" height="100px"/>
-      <br>
-      <label for="filePhoto">Upload Image</label>
+      <div class="d-flex"> 
+        <label class="btn btn-primary" for="filePhoto">Upload Image</label>
+        <label class="btn btn-warning ml-2" id="btn-remove" onclick="removeAttach()" style="display: none;">Remove</label>
+      </div>
       <input type="file" name="filePhoto" value="" class="d-none" id="filePhoto" class="required borrowerImageFile" data-errormsg="PhotoUploadErrorMsg">
-
+      <img for="filePhoto" id="previewHolder" alt="Uploaded Image Preview" width="100px" height="100px" style="display: none;" />
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       
-      <input type="date" class="form-control" tabindex="5" name="dob" id="dob"  placeholder="Date Of Birth" required max="{{\Carbon\Carbon::today()->startOfYear()->subYears(18)->format('Y-m-d')}}"
-      value="{{\Carbon\Carbon::today()->startOfYear()->subYears(18)->format('Y-m-d')}}">
+      <input type="date" class="form-control" tabindex="5" name="dob" id="dob"  placeholder="Date Of Birth" required max=" {{\Carbon\Carbon::today()->startOfYear()->subYears(18)->format('Y-m-d')}}"
+     value="{{ old('dob',\Carbon\Carbon::today()->startOfYear()->subYears(18)->format('Y-m-d') ) }}">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" tabindex="6" name="blood_group" placeholder="Blood Group" required>
+      <input type="text" class="form-control" tabindex="6" name="blood_group" placeholder="Blood Group" required value="{{ old('blood_group') }}">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" tabindex="7" name="marital_status"  placeholder="Mariatl Status" required>
+      <input type="text" class="form-control" tabindex="7" name="marital_status"  placeholder="Mariatl Status" required value="{{ old('marital_status') }}">
     </div>
   </div>
   <label for="form-label" class="mb-3 text-bold">Present Address</label>
@@ -55,31 +69,33 @@
     <div class="col-md-4 mb-3">
       
      
-      <textarea type="text" cols="100" rows="5" tabindex="8" name="present_address"  class="form-control" id="validationDefault04" placeholder="Present Address" style="resize: none;" required></textarea>
+      <textarea type="text" cols="100" rows="5" tabindex="8" name="present_address"  class="form-control" id="present_address" placeholder="Present Address" style="resize: none;" required >{{ old('present_address') }}</textarea>
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" tabindex="9" name="pre_contact"  placeholder="Conatct No" required>
+      <input type="text" class="form-control" tabindex="9" name="pre_contact" onkeypress="isNumberKey(event)" placeholder="Conatct No" required value="{{ old('pre_contact') }}" maxlength="10" minlength="10">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" tabindex="10" name="pre_email"  placeholder="E - Mail" required>
+      <input type="text" class="form-control" tabindex="10" name="pre_email"  placeholder="E - Mail" required value="{{ old('pre_email') }}">
     </div>
   </div>
 
   <label for="form-label" class="mb-3 text-bold">Permanent Address</label>
+  <input type="checkbox" class="ml-2" id="same_as_above">
+  <label for="same_as_above"> Same as Above</label>
    <div class="form-row">
   <div class="col-md-4 mb-3">
   
-      <textarea type="text" cols="100" rows="5" tabindex="11" name="permanent_address"  class="form-control" id="validationDefault04" placeholder="Permanent Address" style="resize: none;" required></textarea>
+      <textarea type="text" cols="100" rows="5" tabindex="11" name="permanent_address"  class="form-control" id="permanent_address" placeholder="Permanent Address" style="resize: none;" required >{{ old('permanent_address') }}</textarea>
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" tabindex="12" name="per_contact"  placeholder="Conatct No" required>
+      <input type="text" class="form-control" tabindex="12" maxlength="10" minlength="10" onkeypress="isNumberKey(event)"  name="per_contact"  placeholder="Conatct No" required value="{{ old('per_contact') }}">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" tabindex="13" name="per_email"  placeholder="E - Mail" required>
+      <input type="text" class="form-control" tabindex="13" name="per_email"  placeholder="E - Mail" required value="{{ old('per_email') }}">
     </div>
   </div>
 
@@ -89,31 +105,31 @@
       <tr>
         <td class="p-2">
   
-          <input type="checkbox" name="qualification_sslc" checked disabled tabindex="14" id="qualification_sslc" value="1"/>
-          <label for="qualification_sslc" class="form-label cursor-pointer" disabled>SSLC</label>
+          <input type="checkbox" name="qualification_sslc" checked tabindex="14" id="qualification_sslc" value="1"/>
+          <label for="qualification_sslc" class="form-label cursor-pointer">SSLC</label>
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" tabindex="15" name="sslc_precentage"  placeholder="Percentage" required>
+          <input type="text" class="form-control" tabindex="15" name="sslc_precentage"  placeholder="Percentage" required value="{{ old('sslc_precentage') }}">
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" tabindex="16" name="sslc_result"  placeholder="Result" required>
+          <input type="text" class="form-control" tabindex="16" name="sslc_result"  placeholder="Result" required value="{{ old('sslc_result') }}">
         </td>
       </tr>
       <tr>
         <td class="p-2">
   
-          <input type="checkbox" name="qualification_puc" tabindex="17" id="qualification_puc" value="1"/>
+          <input type="checkbox" name="qualification_puc" tabindex="17" id="qualification_puc" value="1" />
           <label for="qualification_puc" class="form-label cursor-pointer">PUC</label>
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" tabindex="18" disabled name="puc_precentage" id="puc_precentage"  placeholder="Percentage" >
+          <input type="text" class="form-control" tabindex="18" disabled name="puc_precentage" id="puc_precentage"  placeholder="Percentage" value="{{ old('puc_precentage') }}">
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" tabindex="19" disabled name="puc_result" id="puc_result"  placeholder="Result" >
+          <input type="text" class="form-control" tabindex="19" disabled name="puc_result" id="puc_result"  placeholder="Result" value="{{ old('puc_result') }}">
         </td>
       </tr>
       <tr>
@@ -124,27 +140,27 @@
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="iti_precentage" id="iti_precentage" disabled tabindex="21"  placeholder="Percentage" >
+          <input type="text" class="form-control" name="iti_precentage" id="iti_precentage" disabled tabindex="21"  placeholder="Percentage" value="{{ old('iti_precentage') }}">
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="iti_result" id="iti_result"  disabled tabindex="22"  placeholder="Result" >
+          <input type="text" class="form-control" name="iti_result" id="iti_result"  disabled tabindex="22"  placeholder="Result" value="{{ old('iti_result') }}">
         </td>
       </tr>
       <tr>
         <td class="p-2">
-  
+          
           <input type="checkbox" name="qualification_other" id="qualification_other"  tabindex="23"  value="1"/>
           <label for="qualification_other" class="form-label cursor-pointer">Any Other</label>
-           <input type="text" class="form-control col-md-12" name="others_name"  tabindex="-1"  placeholder="Other's" style="display: none;" >
+           <input type="text" class="form-control col-md-12" name="qualification_other_text" id="qualification_other_text"  tabindex="-1"  placeholder="Other's" style="display: none;" value="{{ old('qualification_other_text') }}">
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="other_precentage" id="other_precentage" disabled tabindex="24"  placeholder="Percentage" >
+          <input type="text" class="form-control" name="other_precentage" id="other_precentage" disabled tabindex="24"  placeholder="Percentage" value="{{ old('other_precentage') }}">
         </td>
         <td class="p-2">
          
-          <input type="text" class="form-control" name="other_result" id="other_result"  disabled tabindex="25"  placeholder="Result" >
+          <input type="text" class="form-control" name="other_result" id="other_result"  disabled tabindex="25"  placeholder="Result" value="{{ old('other_result') }}">
         </td>
       </tr>
 
@@ -155,56 +171,56 @@
    <div class="form-row">
   <div class="col-md-4 mb-3">
   
-      <input type="text" cols="100" rows="5" name="nominee_name"  tabindex="26"  class="form-control" id="validationDefault04" placeholder="Name" style="resize: none;" required/>
+      <input type="text" cols="100" rows="5" name="nominee_name"  tabindex="26"  class="form-control" id="validationDefault04" placeholder="Name" style="resize: none;" required value="{{ old('nominee_name') }}"/>
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" name="nominee_age"  tabindex="27"  placeholder="Age" required>
+      <input type="text" class="form-control" name="nominee_age" maxlength="2" onkeypress="isNumberKey(event)"  minlength="2"  tabindex="27"  placeholder="Age" required value="{{ old('nominee_age') }}">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" name="relationship"  tabindex="28"   placeholder="RelationShip" required>
+      <input type="text" class="form-control" name="nominee_relationship"  tabindex="28"   placeholder="RelationShip" required value="{{ old('nominee_relationship') }}">
     </div>
   </div>
  <div class="form-row">
     <div class="col-md-4 mb-3">
       
-      <input  type="number"  class="form-control" name="shoes_size"   tabindex="29"  placeholder="Shoes Size" required>
+      <input  type="number"  class="form-control" name="shoes_size"   tabindex="29"  placeholder="Shoes Size" required value="{{ old('shoes_size') }}">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="date" class="form-control" name="date_of_joining"  tabindex="30"  placeholder="Date Of Joining" required>
+      <input type="date" class="form-control" name="date_of_joining"  tabindex="30"  placeholder="Date Of Joining" required value="{{ old('date_of_joining') }}">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" name="unit" tabindex="31" placeholder="Unit" required>
+      <input type="text" value="{{ old('unit') }}" class="form-control" name="unit" tabindex="31" placeholder="Unit" required>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       
-      <input  type="text"  class="form-control" name="shoes_size" tabindex="32" placeholder="Division" required>
+      <input  type="text" value="{{ old('divisioin') }}" class="form-control" name="divisioin" tabindex="32" placeholder="Division" required>
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" name="date_of_joining" tabindex="33" placeholder="Department" required>
+      <input type="text" value="{{ old('department') }}" class="form-control" name="department" tabindex="33" placeholder="Department" required>
     </div>
   </div>
    <div class="form-row">
     <div class="col-md-4 mb-3">
       
-      <input  type="text"  class="form-control" name="shoes_size" tabindex="34" placeholder="Previous ESI No" required>
+      <input  type="text"  class="form-control" name="previous_esi_no" tabindex="34" placeholder="Previous ESI No" required value="{{ old('previous_esi_no') }}">
     </div>
     <div class="col-md-3 mb-3">
      
-      <input type="text" class="form-control" name="date_of_joining"  tabindex="35" placeholder="Previous EPF No" required>
+      <input type="text" class="form-control" name="previous_pf_no"  tabindex="35" placeholder="Previous EPF No" required value="{{ old('previous_pf_no') }}">
     </div>
   </div>
 <label class="form-label">Previous Bank A/C No</label>
  <div class="form-row py-3">
 
       @for($i =1 ;$i<= 15;$i++)
-      <input type="text" maxlength="1" tabindex="{{35+$i}}" class="form-control my-2" style="width:35px;margin-right: 8px;text-align:center;" name="shoes_size"  placeholder="-" id="bank_no_{{$i}}">
+      <input type="text" maxlength="1" onkeypress="isNumberKey(event)" tabindex="{{35+$i}}" class="form-control my-2" style="width:35px;margin-right: 8px;text-align:center;" name="bank_acc_no[]"  placeholder="-" id="bank_no_{{$i}}" value="{{ (old('bank_acc_no') != null) ? old('bank_acc_no')[$i-1] : old('bank_acc_no')}}">
       @endfor
   </div>
   <button tabindex="-1" class="btn btn-primary" type="submit">Submit form</button>
@@ -220,21 +236,63 @@ function readURL(input) {
     var reader = new FileReader();
     reader.onload = function(e) {
       $('#previewHolder').attr('src', e.target.result);
+      $("#previewHolder").css("display","flex");
+      $("#btn-remove").css("display","block");
     }
     reader.readAsDataURL(input.files[0]);
   } else {
-    alert('select a file to see preview');
+     alert('select a file to see preview');
+     $("#previewHolder").css("display","none");
     $('#previewHolder').attr('src', '');
+
   }
 }
 
-
-
+function removeAttach()
+{
+    $("#filePhoto").val(null);
+    $("#previewHolder").css("display","none");
+    $('#previewHolder').attr('src', '');
+    $("#btn-remove").css("display","none");
+}
+function lettersOnly(evt)
+{
+    evt = (evt) ? evt : event;
+    var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
+      ((evt.which) ? evt.which : 0));
+    if (charCode == 32)
+        return true;
+    if (charCode > 31 && (charCode < 65 || charCode > 90) &&
+      (charCode < 97 || charCode > 122)) {
+        evt.preventDefault();
+    }
+    else
+        return true;
+}
+function isNumberKey(evt)
+{
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+       evt.preventDefault();
+    
+}
   var dobvalue = '{!!\Carbon\Carbon::today()->subYears(18)->format("d/m/Y")!!}';
   $(function(){
 
     $("#filePhoto").change(function() {
       readURL(this);
+    });
+
+    
+
+    $("#same_as_above").change(function() {
+        if($("#same_as_above").is(":checked"))
+        {
+          var add = $("#present_address").val();
+          $("textarea#permanent_address").val(add);
+        }
+        else
+          $("textarea#permanent_address").val("");
     });
 
 
@@ -283,9 +341,12 @@ function readURL(input) {
               $("#other_precentage").prop("required", true);
               $("#other_result").prop("disabled", false);
               $("#other_result").prop("required", true);
+              $("#qualification_other_text").css("display", "block").focus();
+              
           }
           else{
-             $("#other_precentage").prop("disabled", true).val("");
+              $("#qualification_other_text").css("display", "none").val("");
+              $("#other_precentage").prop("disabled", true).val("");
               $("#other_precentage").prop("required", false);
               $("#other_result").prop("disabled", true).val("");
               $("#other_result").prop("required", false);
