@@ -5,20 +5,20 @@
         <title>Libran</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="favicon.ico">
+        <link rel="icon" type="image/png" href="images/favicon.ico">
 
         <!--Google Font link-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 
-        <link rel="stylesheet" href="{{asset('css/slick/slick.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/slick/slick-theme.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/animate.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/iconfont.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/bootsnav.css')}}"> 
+        <link rel="stylesheet" href="{{asset('css/slick/slick.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/slick/slick-theme.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/animate.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/iconfont.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/font-awesome.min.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/bootstrap.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/magnific-popup.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/bootsnav.css?ver=0.1.3')}}"> 
 
         <!-- xsslider slider css -->
 
@@ -29,14 +29,14 @@
         <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
 
         <!--Theme custom css -->
-        <link rel="stylesheet" href="{{asset('css/style.css')}}"> 
+        <link rel="stylesheet" href="{{asset('css/style.css?ver=0.1.3')}}"> 
         <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
 
         <!--Theme Responsive css-->
         
-        <link rel="stylesheet" href="{{asset('css/responsive.css')}}"> 
+        <link rel="stylesheet" href="{{asset('css/responsive.css?ver=0.1.3')}}"> 
 
-        <script src="{{asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+        <script src="{{asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js?ver=0.1.3')}}"></script>
         
     </head>
     <body>
@@ -66,7 +66,7 @@
                                 <div class="navbar-callus text-left sm-text-center">
                                     <ul class="list-inline">
                                         <li><a href=""><i class="fa fa-phone"></i> Call us:+91 - 98802 78721</a></li>
-                                        <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: libran365@gmail.com</a></li>
+                                        <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: sampathkumar@libran.org.in</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -438,7 +438,7 @@
                                         <li class="mb-3"><i class="fa fa-arrow-circle-right"></i> Proprietor involvement.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Large resume data bank.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Experienced staff.</li>
-                                        <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Relationship with more training institutes like - <b>KGTTI, DonBosco, Ramkrishna mission<b>.</li>
+                                        <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Relationship with more training institutes.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Good hands in statutory maintenance.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Strongest legal advisor.</li>
                                         <li class="mb-3"><i class="fa  fa-arrow-circle-right "></i> Good knowledge in locality.</li>
@@ -595,7 +595,7 @@
                                         <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
                                         <div class="widget_ab_item_text">
                                             <h6 class="text-white">Email Address :</h6>
-                                            <p>libran365@gmail.com</p>
+                                            <p>sampathkumar@libran.org.in</p>
                                         </div>
                                     </div>
                                 </div><!-- End off widget item -->
@@ -669,17 +669,17 @@
     
 
     
-    <script src="{{asset('js/vendor/jquery-1.11.2.min.js')}}"></script>
-    <script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/vendor/jquery-1.11.2.min.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('js/vendor/bootstrap.min.js?ver=0.1.3')}}"></script>
     <!-- <script src="{{asset('js/owl.carousel.min.js')}}"></script> -->
-    <script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
-    <script src="{{asset('js/jquery.easing.1.3.js')}}"></script>
-    <script src="{{asset('css/slick/slick.js')}}"></script>
-    <script src="{{asset('css/slick/slick.min.js')}}"></script>
-    <script src="{{asset('js/jquery.collapse.js')}}"></script>
-    <script src="{{asset('js/bootsnav.js')}}"></script>
-    <script src="{{asset('js/plugins.js')}}"></script>
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/jquery.magnific-popup.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('js/jquery.easing.1.3.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('css/slick/slick.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('css/slick/slick.min.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('js/jquery.collapse.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('js/bootsnav.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('js/plugins.js?ver=0.1.3')}}"></script>
+    <script src="{{asset('js/main.js?ver=0.1.3')}}"></script>
 
 
     </body>

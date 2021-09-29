@@ -36,7 +36,7 @@ body {
     margin-right: 0;
     font-weight: 400;
     width:100%;
-    font-family: 'Raleway', sans-serif;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 .font-grey
@@ -852,7 +852,7 @@ Nav Menu style
 }
 .navbar-brand > img {
     display: block;
-    width: 80%;
+    width: 100%;
 }
 
 .navbar-callus li a{
@@ -876,7 +876,6 @@ Nav Menu style
     background-color: #3765a3;
     color:#fff;
 }
-
 
 /*
 Home Section style
