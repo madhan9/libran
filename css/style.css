@@ -853,6 +853,7 @@ Nav Menu style
 .navbar-brand > img {
     display: block;
     width: 100%;
+    margin-top: -9px;
 }
 
 .navbar-callus li a{
@@ -1788,7 +1789,15 @@ work Section style
   margin-left: auto !important;
 }
 
+@media (max-width: 767px) {
+    .navbar-brand > img {
+    display: block;
+    width: 100%;
+    margin-top: -22px;
+}
+
 @media (min-width: 576px) {
+   
   .m-sm-0 {
     margin: 0 !important;
   }
@@ -2223,6 +2232,7 @@ work Section style
 }
 
 @media (min-width: 768px) {
+
   .m-md-0 {
     margin: 0 !important;
   }

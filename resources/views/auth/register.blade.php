@@ -40,12 +40,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="contact_no" class="col-md-4 col-form-label text-md-right">{{ __('Mobile No') }}</label>
+                            <label for="mobile_no" class="col-md-4 col-form-label text-md-right">{{ __('Mobile No') }}</label>
 
                             <div class="col-md-6">
-                                <input id="contact_no" type="text" maxlength="10" minlength="10" class="form-control @error('contact_no') is-invalid @enderror" name="contact_no" value="{{ old('contact_no') }}" required autocomplete="contact_no">
+                                <input id="mobile_no" type="text" maxlength="10" minlength="10" class="form-control @error('mobile_no') is-invalid @enderror" name="mobile_no" value="{{ old('mobile_no') }}" required autocomplete="mobile_no">
 
-                                @error('contact_no')
+                                @error('mobile_no')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
