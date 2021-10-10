@@ -34,6 +34,14 @@ Route::group(['middleware' => ['auth']], function () {
 	});
 
   	Route::post('/form-save', [App\Http\Controllers\FormController::class, 'store']);
+
+
+
+  	Route::get('/epf-form', function () {
+	    return view('forms.epf_form');
+	});
+
+  	Route::post('/epf-form-save', [App\Http\Controllers\FormEPFController::class, 'store']);
 });
 
 
