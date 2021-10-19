@@ -29,12 +29,12 @@
         <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
 
         <!--Theme custom css -->
-        <link rel="stylesheet" href="{{asset('css/style.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/style.css?ver=0.1.4')}}"> 
         <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
 
         <!--Theme Responsive css-->
         
-        <link rel="stylesheet" href="{{asset('css/responsive.css?ver=0.1.3')}}"> 
+        <link rel="stylesheet" href="{{asset('css/responsive.css?ver=0.1.4')}}"> 
 
         <script src="{{asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js?ver=0.1.3')}}"></script>
         
@@ -427,11 +427,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <div class="">
-                                    <div class="slid_shap bg-grey wow fadeInLeft">
-                                        <img src="images/logo.png" alt="libran Logo">
-                                    </div>
-                                </div>
+                                
                                 <div class="business_item mb-3 text-justify">
                                    
                                     <ul class="mt-3 wow fadeInRight">
