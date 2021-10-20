@@ -65,8 +65,8 @@
                             <div class="col-md-6">
                                 <div class="navbar-callus text-left sm-text-center">
                                     <ul class="list-inline">
-                                        <li><a href=""><i class="fa fa-phone"></i> Call us:+91 - 98802 78721</a></li>
-                                        <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: sampathkumar@libran.org.in</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> Call us:+91 - 96069 68298</a></li>
+                                        <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: office@libran.org.in</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -574,10 +574,12 @@
                                         <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
                                         <div class="widget_ab_item_text">
                                             <h6 class="text-white text-justify">Location</h6>
-                                            <p>
-                                                # 04, 1 st Floor,80feet Road,
-                                                Next to Patel Public School,PNS(HRBR)Layout
-                                                Maruthi Sevanagar Post Bangalore – 560 033.</p>
+                                            <p class="m-1">
+                                                # 04, 1 st Floor,80feet Road,</p>
+                                               <p class="m-1"> Next to Patel Public School,</p>
+                                                <p class="m-1">PNS(HRBR)Layout,</p>
+                                                <p class="m-1">Maruthi Sevanagar Post,</p>
+                                                <p class="m-1">Bangalore – 560 033.</p>
                                         </div>
                                     </div>
                                     <div class="widget_ab_item m-top-30">
